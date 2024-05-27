@@ -1,3 +1,5 @@
+# To run python codes in the terminal we use "nodemon then your file" eg "nodemon notes.py"
+
 # functions-> set of code that runs when called
 # in python we use def instead of function unlike in javascipt
 
