@@ -35,8 +35,10 @@ def greet():
 
 # call the function
 greet()
-# greet("afternoon")
-# greet("evening")
+
+greet_user = lambda name : print(f"Morning {name}")
+greet_user("Joseph")
+
 
 """
 The function definition starts with the def keyword followed by 
@@ -59,7 +61,7 @@ If no argument is provided, the function will use the default value of "morning"
 """
 
 
-def greet(time="morning"):
+def greet(time = "morning"):
     print(f"Good {time}")
 
 
@@ -68,18 +70,18 @@ greet("afternoon")
 greet("evening")
 
 
-# def sum(num1, num2):
-#     print(num1 + num2)
+def calc(num1, num2):
+    print(num1 + num2)
 
-# sum(23,30)
-# sum(45,67)
+calc(23,30)
+calc(45,67)
 
 
-# def sum(num1, num2):
-#     return num1 + num2
+def calc(num1, num2):
+    return num1 + num2
 
-# print(sum(23,30))
-# print(sum(45,67))
+print(calc(23,30))
+print(calc(45,67))
 
 def add_numbers(*args):
     # print(args)
@@ -94,6 +96,21 @@ sum_of_two_nums = add_numbers(20, 30)
 print(sum_of_two_nums)
 
 
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        print(f"Before calling {func.__name__}")
+        result = func(*args, **kwargs)
+        print(f"After calling {func.__name__}")
+        return result
+    return wrapper
+
+    # def wrapper(**kwargs):
+    #     print("Inside the wrapper")
+    #     func(kwargs)
+    # return wrapper
+
+
+@decorator
 def print_names(**kwargs):
     for key in kwargs:
         print(kwargs[key])
@@ -101,7 +118,7 @@ def print_names(**kwargs):
 
 print_names(first_name="Leslie", last_name="Mwangi")
 
-
+@decorator
 def names(**kwargs):
     for key, value in kwargs.items():
         print(value)
@@ -109,3 +126,6 @@ def names(**kwargs):
 
 
 names(first_name="Joseph", last_name="Njoroge")
+
+# Decorators -> reusability
+# lambda functions (anonymous)
