@@ -1,4 +1,6 @@
 """
+# OOP
+------
 Object-oriented programming (OOP) is a programming paradigm that organizes code into objects, which are instances of classes. 
 It aims to model real-world entities and their interactions. 
 OOP promotes code reusability, modularity, and maintainability by encapsulating data and behavior within classes.
@@ -22,6 +24,7 @@ These data types are essential for working with variables and data in Python.
 
 
 # PRINCIPLES OF OOP
+-------------------
 Encapsulation -> The practise of building data and methods that operate on it into a single unit/ class.
               -> It also involves reatricting direct access to some of an object's components.
               -> "self._name" -> shows a private attribute. 
@@ -44,6 +47,7 @@ Abstraction -> The concept of hiding the complex implementatin details and showi
           
             
 # FUNDAMENTAL RELATIONS IN OOP
+-------------------------------
 Association -> Relationship btwn classes where each class has an independent existence and they are loosely connected
             -> It is often used to represent a simple connection between objects
             -> It enables us to build a scallable application
@@ -62,6 +66,7 @@ Inheritance -> Relationship that allows a new class to inherit the properties an
 
 
 # SIMPLIFIED EXPLANATION
+------------------------
 1. In Python, inheritance is a mechanism where a class (child class) inherits properties and methods from another class (parent class).
 2. The super() function is a built-in Python function that returns a proxy object (temporary object of the parent class) 
 that allows you to call methods of the parent class.
